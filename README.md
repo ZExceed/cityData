@@ -5,7 +5,6 @@ http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201401/t20140116_501070.html
 # Usage
 - citydata.txt 省市区数据列表
 - location.js 联动组件DEMO
-- 跨域问题解决
 
 ```html
 <div id="select">
