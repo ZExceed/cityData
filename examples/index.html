@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>demo</title>
+    <title>范例 Examples</title>
     <meta name="renderer" content="webkit">
     <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../location.js"></script>
+    <link rel="stylesheet" href="http://cdn.xscc.com/static/css/demo.min.css">
 </head>
 <body>
-<div id="select">
-    <select name="prov"></select>
-    <select name="city"></select>
-    <select name="dist"></select>
-</div>
-<br><br>
-<button id="getregion">获取位置</button>
-<br><br>
-<div id="info"></div>
-<script>
-    $(document).ready(function(){
-        var demo = $('#select').location(110101);
-        $('#getregion').click(function(){
-            var id   = demo.getRegionId();
-            var data = demo.id2Region(id);
-            $('#info').html('编号: '+id+'<br> 位置: '+data.region.join(' '));
+<h1 class="examples">范例 Examples</h1>
+<div class="container" style="width:50%;">
+    <div id="select">
+        <select name="prov"></select>
+        <select name="city"></select>
+        <select name="dist"></select>
+    </div>
+    <button id="getregion">获取位置</button>
+    <div id="info"></div>
+    <script>
+        $(document).ready(function(){
+            var demo = $('#select').location(110101);
+            $('#getregion').click(function(){
+                var id   = demo.getRegionId();
+                var data = demo.id2Region(id);
+                $('#info').html('编号: '+id+'<br> 位置: '+data.region.join(' '));
+            });
         });
-    });
-</script>
+    </script>
+</div>
 </body>
 </html>
